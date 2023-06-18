@@ -28,6 +28,8 @@ public class _7_Q_11021 {
                     .append(str.charAt(0) - '0' + str.charAt(2) - '0').append("\n");
         } // -'0' || -48 -> charAt()은 char로 반환 -> [아스키 문자 -> 숫자로] 변환
 
+        System.out.println(sb);
+
         br.close();
         bw.flush();
         bw.close();
