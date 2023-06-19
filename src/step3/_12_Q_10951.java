@@ -12,20 +12,17 @@ public class _12_Q_10951 {
         // EOF : End of File
 
         // 방법 1
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            System.out.println(sc.nextInt()+ sc.nextInt());
-        }
+//        Scanner sc = new Scanner(System.in);
+//        while (sc.hasNext()) {
+//            System.out.println(sc.nextInt()+ sc.nextInt());
+//        }
 
-        // 방법 2 - 이렇게 하면 무한루프...
-/*        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine();
-        StringTokenizer st;
+        // 방법 2 - 이렇게 하면 런타임에러,,,
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        while (str != null) {
-            st = new StringTokenizer(str);
-            System.out.println(st.nextToken() + st.nextToken());
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            System.out.println(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
         }
-        br.close();*/
     }
 }
