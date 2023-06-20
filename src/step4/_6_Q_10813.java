@@ -1,9 +1,8 @@
 package step4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class _Q_10813 {
+public class _6_Q_10813 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
