@@ -12,28 +12,17 @@ public class _7_Q_5597 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int[] arr = new int[28];
-        ArrayList<Integer> list = new ArrayList<Integer>();
-
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(br.readLine());
+        boolean[] arr = new boolean[31]; // 1<=n<=30이라서 boolean[30]하면 18줄에 에러..
+        for (int i = 0; i < 28; i++) {
+            int n = Integer.parseInt(br.readLine());
+            arr[n] = true;
         }
 
-        for (int i = 1; i <= arr.length-1; i++) {
-            if(!contains(arr, i))
-                list.add(i);
+        for (int i = 1; i <= 30; i++) {
+            if(!arr[i])
+                System.out.println(i);
         }
 
-        Collections.sort(list);
-
-        for(int n : list)
-            System.out.println(n);
-
-        br.close();
-    }
-
-    public static boolean contains(int[] arr, int key) {
-        return Arrays.stream(arr).anyMatch(i -> i == key);
     }
 }
 
