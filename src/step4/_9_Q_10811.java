@@ -1,5 +1,7 @@
 package step4;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class _9_Q_10811 {
@@ -16,16 +18,21 @@ public class _9_Q_10811 {
 
         // M번 반복
         for (int m = 0; m < M; m++) {
-            int i = sc.nextInt(); // 1
-            int j = sc.nextInt(); // 2
+            int i = sc.nextInt()-1; // 1
+            int j = sc.nextInt()-1; // 2
 
-            for (int k = j-1; k >= i-1; k--) { // k=1 k >=0 k--
-                //여기서 arr[k] 어떻게 저장할지...
+            while (i < j) {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+                i++;
+                j--;
             }
+
         }
 
         // 출력
         for (int n : arr)
-            System.out.print(n+" ");
+            System.out.print(n + " ");
     }
 }
